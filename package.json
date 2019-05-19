@@ -1,0 +1,20 @@
+{
+  "name": "weekly-challenge-4",
+  "version": "1.0.0",
+  "description": "Eliot's Weekly MongoDB World Challenge Week 4: Stitch Star",
+  "dependencies": {
+    "chai": "^4.2.0",
+    "chai-http": "^4.2.1",
+    "minimist": "^1.2.0",
+    "uuid": "^3.3.2"
+  },
+  "devDependencies": {
+    "mocha": "^6.1.4"
+  },
+  "scripts": {
+    "start": "mocha validator.js",
+    "test": "mocha"
+  },
+  "author": "MongoDB",
+  "license": "ISC"
+}
