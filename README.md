@@ -24,7 +24,7 @@ For example:
 npm start -- --app "challenge-uvtrd"
 
 > stitch_challenge@1.0.0 start /home/bobbytables/mongodb/weekly-challenge-4
-> mocha validator.js "--app" "stitchy-and-scratchy-dczlw"
+> mocha validator.js "--app" "challenge-uvtrd"
 
 
 
@@ -33,7 +33,7 @@ npm start -- --app "challenge-uvtrd"
       ✓ should return HTTP status code 200 (3485ms)
       ✓ should return an array of 5 listings without any query parameters (3186ms)
       ✓ should only include the fields configured in the Stitch rule (2156ms)
-      ✓ should only return listings matching the Stich filter for the collection (3583ms)
+      ✓ should only return listings matching the Stitch filter for the collection (3583ms)
       ✓ should return listings matching query parameters (1587ms)
     Webhook 2: add-swagpref
       ✓ should be able to insert a document and return status code 201 (1074ms)
@@ -43,4 +43,26 @@ npm start -- --app "challenge-uvtrd"
 
 
   8 passing (18s)
+```
+
+You can also run a specific test by utilising the `-g` parameter. For example, to only run `search-listings` you can do: 
+
+```s
+npm start -- --app "challenge-uvtrd" -g 'search-listings'
+
+> stitch_challenge@1.0.0 start /home/bobbytables/mongodb/weekly-challenge-4
+> mocha validator.js "--app" "challenge-uvtrd" "-g" "search-listings"
+
+
+
+  *** Eliot's Weekly MongoDB World Challenge Week 4 - Stitch Star ***
+    Webhook 1: search-listings
+      ✓ should return HTTP status code 200 (5376ms)
+      ✓ should return an array of 5 listings without any query parameters (900ms)
+      ✓ should only include the fields configured in the Stitch rule (1024ms)
+      ✓ should only return listings matching the Stitch filter for the collection (4569ms)
+      ✓ should return listings matching query parameters (3006ms)
+
+
+  5 passing (15s)
 ```
