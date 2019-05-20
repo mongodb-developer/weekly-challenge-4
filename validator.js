@@ -69,7 +69,7 @@ describe("*** Eliot's Weekly MongoDB World Challenge Week 4 - Stitch Star ***", 
                 done();
             });
         });
-        it('should only return listings matching the Stich filter for the collection', function(done){
+        it('should only return listings matching the Stitch filter for the collection', function(done){
             var req = chai.request(webhook1).get(secret1);
             req.end(function(err, res) {
                 expect(err).to.be.null;
